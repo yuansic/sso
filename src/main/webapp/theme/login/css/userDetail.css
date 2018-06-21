@@ -1,0 +1,61 @@
+.userInfoModule{
+    background: #fff;
+    width: 100%;
+    border:1px solid #e6eaee;
+    height:531px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.infoContent{
+    margin: 30px 34px;
+}
+.infoTitle img{
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    margin-top: -6px;
+}
+.infoTitle span{
+    font-family:PingFangSC-Medium;
+    font-size:16px;
+    color:#148be5;
+    letter-spacing:0.25px;
+    text-align:left;
+}
+.infoLable, .infoTxt{float: left; font-size:14px;}
+.infoLable{
+    font-weight: 600;
+    font-family:PingFangSC-Medium;
+    color:#222c3c;
+    letter-spacing:0.22px;
+    margin-right: 10px;
+    width: 68px;
+    text-align: right;
+}
+.infoTxt{
+    font-family:PingFangSC-Regular;
+    color:#5a667b;
+}
+.marginTp18{margin-top: 18px;}
+.userInfo{
+    margin: 28px 10px;
+}
+.infoImgs img{
+    width: 120px;
+    height: 75px;
+    margin-right: 28px;
+}
+.baseInfoBtn{width: 100%;margin-top: 50px;}
+.ngUser-primary{
+    color: #fff;
+    font-family:PingFangSC-Regular;
+    background-image:linear-gradient(-180deg, #4babf3 7%, #0995fe 90%);
+    border:1px solid #84b4d7;
+    border-radius:4px;
+    cursor: pointer;
+    padding: 8px 26px;
+}
+.baseInfoBtn button{
+    display: block;
+    margin: auto;
+}

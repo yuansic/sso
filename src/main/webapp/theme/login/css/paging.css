@@ -1,0 +1,48 @@
+.ui-paging-container{color:#666;font-size: 12px;}
+.ui-paging-container ul{overflow: hidden;text-align: right;}
+.ui-paging-container ul,.ui-paging-container li{list-style: none;}
+.ui-paging-container li{display: inline-block;padding:5px 12px;margin-left: 5px;color:#666;text-align: center;font-size: 14px;}
+.ui-paging-container li.ui-pager{cursor: pointer; border-radius: 2px;}
+.ui-paging-container li.ui-pageNum:hover,.ui-paging-container li.focus{background-color: #288df0;color:#FFFFFF;}
+.ui-paging-container li.ui-paging-ellipse{border:none;}
+.ui-paging-container li.ui-paging-toolbar{padding:0;}
+.ui-paging-container li.ui-paging-toolbar select{height:22px;border:1px solid #ddd;color: #666;}
+.ui-paging-container li.ui-paging-toolbar input{line-height: 20px; height:20px;padding:0;border:1px solid #ddd;text-align: center;width: 30px;margin:0 0 0 5px;vertical-align: middle;}
+.ui-paging-container li.ui-paging-toolbar a{vertical-align: middle; text-decoration: none;display: inline-block;height:20px;border:1px solid #ddd;vertical-align: top;border-radius: 6px;line-height: 20px;padding:0 3px;cursor: pointer;margin-left: 5px;color: #666;}
+.ui-paging-container li.ui-pager-disabled,.ui-paging-container li.ui-pager-disabled:hover{cursor: default;border:none;color:#ddd;font-size: 20px;}
+.ui-select-pagesize{
+    padding: 5px 12px;
+    border-radius: 6px;
+    width:102px;
+    font-family:PingFangSC-Semibold;
+    font-size:14px;
+    color:#313d4f;
+    text-align:left;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background-image: url("../imgs/select_arrow@2x.png");
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 12px 6px;
+    background-position-x: 90%;
+    border: 1px solid #ccc;
+}
+.pageTxt{
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#666666;
+    line-height:18px;
+}
+.ui-paging-count{
+    background-color: #fff;
+    width: 62px;
+    height: 30px;
+    border-radius: 6px;
+    padding-left: 12px;
+    border: 1px solid #ccc;
+}
+/*.page_fa:hover,.page_fa:active{background: none;}*/

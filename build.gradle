@@ -1,0 +1,317 @@
+group 'com.x.sso'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+sourceCompatibility = 1.8
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+    exclude group: 'log4j', module: 'log4j'
+    exclude group: "org.slf4j", module: "slf4j-log4j12"
+}
+
+repositories {
+    maven { url "http://172.16.8.35:8081/nexus/content/groups/public/" }
+}
+sourceSets {
+	main {
+		java {
+			srcDir 'src/main/java'
+		}
+		resources {
+			srcDir 'src/main/resources'
+		}
+	}
+}
+
+dependencies {
+    compile('org.aspectj:aspectjrt:1.8.6') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.aspectj:aspectjweaver:1.8.6') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('javax.validation:validation-api:1.1.0.Final') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.slf4j:slf4j-api:1.7.12') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-webapp-support:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-monitor:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-authentication:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-services:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-logout:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-audit:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-logging:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-tickets:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-web:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-validation:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-core-util:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-webapp-throttle:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-webapp-actions:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-webapp-cookie:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-webapp-reports:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-webapp-themes:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.jasig.cas:cas-server-webapp-validation:4.2.7') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.pac4j:spring-webmvc-pac4j:1.0.1') {
+        exclude group: 'org.springframework', module: 'spring-core'
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'org.pac4j', module: 'pac4j-core'
+        exclude group: 'org.springframework', module: 'spring-webmvc'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.pac4j:pac4j-core:1.8.9') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('org.pac4j:pac4j-http:1.8.9') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    compile('com.lmax:disruptor:3.3.4') {
+        exclude group: '*', module: 'spring-boot-starter-jetty'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+        exclude group: '*', module: 'spring-boot-starter-tomcat'
+    }
+    runtime('org.glassfish.web:javax.el:2.2.6') {
+        exclude group: 'javax.el', module: 'javax.el-api'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.slf4j:jul-to-slf4j:1.7.12') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.codehaus.groovy:groovy-jsr223:2.4.7') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.apache.logging.log4j:log4j-api:2.6.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.apache.logging.log4j:log4j-core:2.6.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.apache.logging.log4j:log4j-slf4j-impl:2.6.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.apache.logging.log4j:log4j-jcl:2.6.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.springframework:spring-expression:4.2.8.RELEASE') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('javax.servlet:jstl:1.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.apereo.cas:cas-server-security-filter:2.0.6') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('com.ryantenney.metrics:metrics-spring:3.1.2') {
+        exclude group: 'org.springframework', module: 'spring-beans'
+        exclude group: 'org.springframework', module: 'spring-core'
+        exclude group: 'org.springframework', module: 'spring-context-support'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+        exclude group: 'org.springframework', module: 'spring-aop'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('io.dropwizard.metrics:metrics-jvm:3.1.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('io.dropwizard.metrics:metrics-servlets:3.1.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.apache.logging.log4j:log4j-web:2.6.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.jasig:spring-webflow-client-repo:1.0.0') {
+        exclude group: 'org.springframework', module: 'spring-beans'
+        exclude group: 'org.springframework', module: 'spring-core'
+        exclude group: 'commons-codec', module: 'commons-codec'
+        exclude group: 'log4j', module: 'log4j'
+        exclude group: 'org.springframework.webflow', module: 'spring-webflow'
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+        exclude group: 'org.springframework', module: 'spring-web'
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('com.mchange:c3p0:0.9.5.2') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+    runtime('org.bouncycastle:bcprov-jdk15on:1.51') {
+        exclude group: 'cglib', module: 'cglib'
+        exclude group: 'cglib', module: 'cglib-full'
+    }
+
+    //servlet
+    compile "javax.servlet:javax.servlet-api:3.1.0"
+    compile "javax.servlet.jsp:javax.servlet.jsp-api:2.3.1"
+    compile 'mysql:mysql-connector-java:5.1.36'
+
+    //json
+    compile 'org.json:json:20140107'
+    //md5
+    compile 'commons-codec:commons-codec:1.5'
+    //jstl
+    compile 'jstl:jstl:1.2'
+    //cache
+    //compile 'com.ai.runner.center.mmp:manager:1.0.0-SNAPSHOT'
+
+    compile 'org.javassist:javassist:3.19.0-GA'
+
+    compile 'net.sf.json-lib:json-lib:2.4:jdk15'
+
+    compile 'com.x.xss.filter:x-xss-filter:1.0-SNAPSHOT'
+    compile 'com.x.sso:x-sso-client:1.0-SNAPSHOT'
+    compile ('com.x.uni.session:x-uni-session:1.0-SNAPSHOT'){
+        exclude group: 'org.springframework'
+        exclude group: 'org.quartz-scheduler'
+    }
+	compile 'com.x:sdk:1.0-SNAPSHOT'
+    compile 'org.mybatis:mybatis:3.2.8'
+    compile 'org.mybatis:mybatis-spring:1.2.3'
+    compile 'mysql:mysql-connector-java:5.1.36'
+
+    testCompile(
+            "org.springframework:spring-test:3.2.6.RELEASE",
+            "junit:junit:4.11"
+    )
+}
+
+
+war{
+    baseName  "x-sso-server-web"
+}

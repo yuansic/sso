@@ -1,0 +1,107 @@
+.cusContentModule{
+    width: 100%;
+    margin-top: 18px;
+}
+.cusInfoModule,.cusSpreadModule,.cusEnrollModule{
+    background: #fff;
+    border:1px solid #e6eaee;
+    border-radius: 5px;
+}
+.cusEnrollModule{
+    height: 241px;
+    margin-top: 18px;
+}
+.cusInfoChartModule{
+    width: 100%;
+}
+.cusSpreadChart{
+    height: 100%;
+    width: 100%;
+}
+.cusSpreadModule{
+    height: 263px;
+}
+.cusInfoChart{
+    width: 100%;
+    height: 434px;
+}
+.cusInfoTitle{
+    height: 49px;
+    line-height: 49px;
+}
+.enrollTitle{
+    height: 45px;
+    line-height: 45px;
+}
+.cusInfoTitle,.enrollTitle{
+    font-family:PingFangSC-Semibold;
+    font-size:16px;
+    color:#354052;
+    font-weight: 600;
+    border:1px solid #e6eaee;
+    background: -moz-linear-gradient(top, #f4f7fa 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #f4f7fa 0%,#ffffff 100%);
+    background: -o-linear-gradient(top, #f4f7fa 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top, #f4f7fa 0%,#ffffff 100%);
+    background: linear-gradient(to bottom, #f4f7fa 0%,#ffffff 100%);
+    border:1px solid #e6eaee;
+}
+.cusInfoTitle p{
+    margin-left: 29px;
+}
+.enrollTitle p{margin-left: 31px;}
+.cusInfoFooter{
+    height: 37px;
+    border-top:1px solid #e6eaee;
+    margin-left: 30px;
+    margin-right: 31px;
+}
+.cusEnroll, .cusEnroll_last{
+    width: 100%;
+    height: 66px;
+}
+.cusEnroll{
+    border-bottom: 1px solid #e6eaee;
+}
+.cusEnroll_last{
+    border: none;
+}
+.enrollIcon,.enrollIcon_two,.enrollIcon_three{width: 14px;height: 14px;border-radius: 50%;margin: 26px 16px 26px 31px;}
+.enrollIcon{
+    background: #2297f0;
+}
+.enrollIcon_two{
+    background: #337bbf;
+   /* background-image:linear-gradient(-180deg, #337bbf 0%, #34659f 100%);*/
+}
+.enrollIcon_three{
+    background: #256199;
+   /* background-image:linear-gradient(-180deg, #256199 2%, #084183 98%);*/
+}
+.enrollIcon,.enrollEare,.enrollIcon_two,.enrollIcon_three{
+    float: left;
+}
+.enrollEare{
+    font-family:PingFangSC-Semibold;
+    font-size:16px;
+    color:#354052;
+    text-align:left;
+}
+.enrollEare{
+    line-height: 66px;
+}
+.numTxt{
+    margin-top: 7px;
+}
+.enrollNum{
+    font-family:".AppleSystemUIFont";
+    font-size:16px;
+    color:#354052;
+}
+.enrollTxt{
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#7f8fa4;
+    text-align:left;
+}
+.errollChart{width: 76%;height: 50px;margin-top: 16px;}
